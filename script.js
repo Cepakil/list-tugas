@@ -5,6 +5,7 @@ const filterOption = document.querySelector(".filter-todo");
 const daftarTugas = [
     "Tugas Aljabar (GC) deadline 23 Desember",
     "Tugas SLI UAS (GC) deadline 31 Desember",
+    "Tugas Manajemen Pemasaran (GC) Deadline 31 Desember",
     "Tugas Review jurnal Material teknik (GC) deadline 13 Januari",
     "Tugas Ergonomi membuat video upload ke yt deadline -",
     "Tugas Laporan UAS Statistika deadline hari H jadwal UAS",
