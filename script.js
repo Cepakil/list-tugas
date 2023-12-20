@@ -2,11 +2,18 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
+const daftarTugas = [
+    "Tugas 1",
+    "Tugas 2",
+    "Tugas 3"
+];
+
 
 document.addEventListener("DOMContentLoaded", getLocalTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
+document.addEventListener("DOMContentLoaded", tampilkanTugas);
 
 function addTodo(event) {
     event.preventDefault();
@@ -128,4 +135,30 @@ function removeLocalTodos(todo) {
     const todoIndex = todo.children[0].innerText;
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+// Fungsi untuk menambahkan daftar tugas ke dalam elemen HTML
+function tampilkanTugas() {
+    const todoList = document.querySelector(".todo-list");
+
+    daftarTugas.forEach(function(tugas) {
+        const todoDiv = document.createElement("div");
+        todoDiv.classList.add("todo");
+        const newTodo = document.createElement("li");
+        newTodo.innerText = tugas;
+        newTodo.classList.add("todo-item");
+        todoDiv.appendChild(newTodo);
+
+        const completedButton = document.createElement("button");
+        completedButton.innerHTML = '<i class="fas fa-check-circle"></li>';
+        completedButton.classList.add("complete-btn");
+        todoDiv.appendChild(completedButton);
+
+        const trashButton = document.createElement("button");
+        trashButton.innerHTML = '<i class="fas fa-trash"></li>';
+        trashButton.classList.add("trash-btn");
+        todoDiv.appendChild(trashButton);
+
+        todoList.appendChild(todoDiv);
+    });
 }
