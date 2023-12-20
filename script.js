@@ -3,9 +3,13 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 const daftarTugas = [
-    "Tugas 1",
-    "Tugas 2",
-    "Tugas 3"
+    "Tugas Aljabar (GC) deadline 23 Desember",
+    "Tugas SLI UAS (GC) deadline 31 Desember",
+    "Tugas Review jurnal Material teknik (GC) deadline 13 Januari",
+    "Tugas Ergonomi membuat video upload ke yt deadline -",
+    "Tugas Laporan UAS Statistika deadline hari H jadwal UAS",
+    "Tugas Jurnal Ekonomi Teknik Deadline hari H jadwal UAS",
+
 ];
 
 
